@@ -18,9 +18,9 @@ import {
 } from "./LocationModalElements";
 
 const LocationModal = ({ showModal, setShowModal }) => {
-  // const [locationInput, setLocationInput] = useState("");
   const dispatch = useDispatch();
   const [suggestion, setSuggestion] = useState([]);
+  // eslint-disable-next-line
   const [locations, setLocation] = useState([
     ["Kulina", "Jalan Tulodong Atas 28, Senayan, Kebayoran Baru"],
     [
@@ -52,12 +52,14 @@ const LocationModal = ({ showModal, setShowModal }) => {
   const handleClick = (e) => {
     e.preventDefault();
     dispatch(changeLocation(suggestion[0][0]));
+    setShowModal((prev) => !prev);
+    setSuggestion([]);
   };
 
   return (
     <>
       {showModal ? (
-        <ModalBackground>
+        <ModalBackground onClick={() => setShowModal(false)}>
           <ModalWrapper showModal={showModal}>
             <ModalContent>
               <ModalText>Cek Makanan yang tersedia di lokasi kamu!</ModalText>
@@ -68,21 +70,13 @@ const LocationModal = ({ showModal, setShowModal }) => {
                 >
                   location_on
                 </span>
-                <TextInput
-                  onChange={(e) => findSuggestion(e.target.value)}
-                  // value={suggestion}
-                />
+                <TextInput onChange={(e) => findSuggestion(e.target.value)} />
               </InputWrapper>
               <SuggestionLocationWrapper>
                 {suggestion &&
                   suggestion.map((location, index) => (
-                    <Suggestion
-                      key={index}
-                      onClick={handleClick}
-                      name="suggestion"
-                      value="testing"
-                    >
-                      <SuggestionIcon name="suggestionIcon">
+                    <Suggestion key={index} onClick={handleClick}>
+                      <SuggestionIcon>
                         <span
                           className="material-icons"
                           style={{ color: "#6e7679" }}
@@ -91,29 +85,11 @@ const LocationModal = ({ showModal, setShowModal }) => {
                         </span>
                       </SuggestionIcon>
                       <SuggestionTextWrapper>
-                        <MainText name="suggestionText" value="texting2">
-                          {location[0]}
-                        </MainText>
-                        <SubText name="suggestionSub">{location[1]}</SubText>
+                        <MainText>{location[0]}</MainText>
+                        <SubText>{location[1]}</SubText>
                       </SuggestionTextWrapper>
                     </Suggestion>
                   ))}
-                {/* {locations.map((place, index) => (
-                  <Suggestion key={index}>
-                    <SuggestionIcon>
-                      <span
-                        className="material-icons"
-                        style={{ color: "#6e7679" }}
-                      >
-                        location_on
-                      </span>
-                    </SuggestionIcon>
-                    <SuggestionTextWrapper>
-                      <MainText>{place[0]}</MainText>
-                      <SubText>{place[1]}</SubText>
-                    </SuggestionTextWrapper>
-                  </Suggestion>
-                ))} */}
               </SuggestionLocationWrapper>
             </ModalContent>
             <CloseModalButton

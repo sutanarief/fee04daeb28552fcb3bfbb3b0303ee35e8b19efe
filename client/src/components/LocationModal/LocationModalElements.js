@@ -26,7 +26,6 @@ export const ModalWrapper = styled.div`
     width: 100%;
     height: 80%;
     bottom: 0;
-    left: 0;
     position: fixed;
     border-radius: 10px 10px 0 0;
   }
