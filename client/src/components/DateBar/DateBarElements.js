@@ -6,19 +6,25 @@ export const DateBarWrapper = styled.div`
   justify-content: center;
   align-content: center;
   text-align: center;
-  margin-top: 40px;
   border-bottom: 2px solid #f1f1f2;
+  background-color: #fff;
 `;
 
 export const DateItem = styled.div`
   display: flex;
   flex-direction: column;
-  width: 54px;
-  height: 54px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
   align-content: center;
   justify-content: center;
   background-color: #fff;
   color: #424749;
+
+  /* @media screen and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  } */
 `;
 
 export const SelectedDate = styled.div`
@@ -26,19 +32,33 @@ export const SelectedDate = styled.div`
   flex-direction: column;
   width: 50px;
   height: 50px;
+  margin: 0 8px 8px 8px;
   align-content: center;
   justify-content: center;
   background-color: #424749;
   color: #f1f1f2;
   border-radius: 50%;
+
+  /* @media screen and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  } */
 `;
 
 export const DayText = styled.span`
   font-weight: 400;
   font-size: 12px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 8px;
+  }
 `;
 
 export const DateText = styled.span`
   font-weight: 600;
   font-size: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;

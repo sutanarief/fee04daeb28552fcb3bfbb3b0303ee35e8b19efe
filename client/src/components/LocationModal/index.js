@@ -20,8 +20,7 @@ import {
 const LocationModal = ({ showModal, setShowModal }) => {
   const dispatch = useDispatch();
   const [suggestion, setSuggestion] = useState([]);
-  // eslint-disable-next-line
-  const [locations, setLocation] = useState([
+  const [locations] = useState([
     ["Kulina", "Jalan Tulodong Atas 28, Senayan, Kebayoran Baru"],
     [
       "Pancoran Riverside Appartement",

@@ -16,7 +16,7 @@ const LocationBar = () => {
     setShowModal((prev) => !prev);
   };
   return (
-    <>
+    <div style={{ backgroundColor: "#fff" }}>
       <LocationBarWrapper>
         <div style={{ margin: "24px 0px 16px 16px" }}>
           <span
@@ -46,7 +46,7 @@ const LocationBar = () => {
           <LocationModal showModal={showModal} setShowModal={setShowModal} />
         </LocationBarContent>
       </LocationBarWrapper>
-    </>
+    </div>
   );
 };
 
