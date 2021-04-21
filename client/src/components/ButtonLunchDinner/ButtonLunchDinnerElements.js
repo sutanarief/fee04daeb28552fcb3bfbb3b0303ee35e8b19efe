@@ -3,21 +3,7 @@ import styled from "styled-components";
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-`;
-
-export const Button = styled.button`
-  cursor: pointer;
-  border: 1px solid #f1f1f2;
-  padding: 16px;
-  font-size: 20px;
-  text-align: center;
-  margin: 8px 0 8px 0;
-  width: 300px;
-
-  &:active {
-    background-color: #424749;
-    color: #f1f1f2;
-  }
+  background-color: #fff;
 `;
 
 export const FormWrapper = styled.form`
@@ -50,6 +36,7 @@ export const InputLabel = styled.label`
 
   @media screen and (max-width: 768px) {
     width: 45%;
+    font-size: 16px;
   }
 
   -webkit-tap-highlight-color: transparent;

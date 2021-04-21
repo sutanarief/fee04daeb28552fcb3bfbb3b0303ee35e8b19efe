@@ -2,14 +2,17 @@ import styled from "styled-components";
 
 export const LocationBarWrapper = styled.div`
   display: flex;
-  height: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  align-self: stretch;
 `;
 
 export const LocationBarContent = styled.div`
   flex-direction: column;
   width: 100%;
   height: 60px;
-  margin: 16px 0 24px 16px;
+  margin: 16px 0 0 16px;
 `;
 
 export const LocationSubText = styled.span`
