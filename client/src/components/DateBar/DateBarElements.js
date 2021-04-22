@@ -52,3 +52,7 @@ export const DateText = styled.span`
     font-size: 16px;
   }
 `;
+
+export const DateItemDisabled = styled(DateItem)`
+  color: #e2e2e4;
+`;
