@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { changeLocation } from "../../store";
 import {
@@ -19,6 +19,7 @@ import {
 
 const LocationModal = ({ showModal, setShowModal }) => {
   const dispatch = useDispatch();
+  const modalRef = useRef();
   const [suggestion, setSuggestion] = useState([]);
   const [locations] = useState([
     ["Kulina", "Jalan Tulodong Atas 28, Senayan, Kebayoran Baru"],
@@ -48,9 +49,16 @@ const LocationModal = ({ showModal, setShowModal }) => {
     }
   };
 
-  const handleClick = (e) => {
+  const closeModal = (e) => {
+    if (modalRef.current === e.target) {
+      setShowModal(false);
+    }
+  };
+
+  const handleClick = (e, index) => {
     e.preventDefault();
-    dispatch(changeLocation(suggestion[0][0]));
+    console.log(suggestion[index][0]);
+    dispatch(changeLocation(suggestion[index][0]));
     setShowModal((prev) => !prev);
     setSuggestion([]);
   };
@@ -58,7 +66,7 @@ const LocationModal = ({ showModal, setShowModal }) => {
   return (
     <>
       {showModal ? (
-        <ModalBackground onClick={() => setShowModal(false)}>
+        <ModalBackground ref={modalRef} onClick={closeModal}>
           <ModalWrapper showModal={showModal}>
             <ModalContent>
               <ModalText>Cek Makanan yang tersedia di lokasi kamu!</ModalText>
@@ -74,7 +82,10 @@ const LocationModal = ({ showModal, setShowModal }) => {
               <SuggestionLocationWrapper>
                 {suggestion &&
                   suggestion.map((location, index) => (
-                    <Suggestion key={index} onClick={handleClick}>
+                    <Suggestion
+                      key={index}
+                      onClick={(e) => handleClick(e, index)}
+                    >
                       <SuggestionIcon>
                         <span
                           className="material-icons"

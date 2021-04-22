@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import Cart from "../Cart";
 import LocationModal from "../LocationModal";
 import {
   LocationButton,
@@ -16,7 +17,13 @@ const LocationBar = () => {
     setShowModal((prev) => !prev);
   };
   return (
-    <div style={{ backgroundColor: "#fff" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignContent: "center",
+      }}
+    >
       <LocationBarWrapper>
         <div style={{ margin: "24px 0px 16px 16px" }}>
           <span
@@ -45,6 +52,7 @@ const LocationBar = () => {
           </LocationButton>
           <LocationModal showModal={showModal} setShowModal={setShowModal} />
         </LocationBarContent>
+        <Cart />
       </LocationBarWrapper>
     </div>
   );

@@ -15,16 +15,11 @@ export const DateItem = styled.div`
   flex-direction: column;
   width: 50px;
   height: 50px;
-  margin-bottom: 8px;
+  margin: 8px;
   align-content: center;
   justify-content: center;
   background-color: #fff;
   color: #424749;
-
-  /* @media screen and (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-  } */
 `;
 
 export const SelectedDate = styled.div`
@@ -32,17 +27,12 @@ export const SelectedDate = styled.div`
   flex-direction: column;
   width: 50px;
   height: 50px;
-  margin: 0 8px 8px 8px;
+  margin: 8px;
   align-content: center;
   justify-content: center;
   background-color: #424749;
   color: #f1f1f2;
   border-radius: 50%;
-
-  /* @media screen and (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-  } */
 `;
 
 export const DayText = styled.span`
