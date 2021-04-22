@@ -8,8 +8,6 @@ import {
 
 const ButtonLunchDinner = () => {
   const [show, setShow] = useState(false);
-  const [lasYpos, setLastYPos] = useState(0);
-
   const { scrollY } = useViewportScroll();
 
   const update = () => {
@@ -22,27 +20,13 @@ const ButtonLunchDinner = () => {
 
   useEffect(() => {
     return scrollY.onChange(() => update());
+    // eslint-disable-next-line
   }, []);
 
   const variants = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, x: -10000 },
   };
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const yPos = window.scrollY;
-  //     const isScrollingUp = yPos < lasYpos;
-
-  //     setShow(isScrollingUp);
-  //     setLastYPos(yPos);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll, false);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll, false);
-  //   };
-  // }, [lasYpos]);
 
   return (
     <motion.div

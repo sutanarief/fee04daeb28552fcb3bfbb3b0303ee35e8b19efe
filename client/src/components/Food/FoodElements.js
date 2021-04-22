@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FoodCardWrapper = styled.div`
-  /* background-color: red; */
+  margin-top: 32px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -21,13 +21,13 @@ export const FoodCard = styled.div`
 
 export const ImageWrapper = styled.div`
   overflow: hidden;
-  height: 200px;
-  width: 300px;
-  background-color: yellow;
+  display: flex;
 `;
 
 export const CardImage = styled.img`
-  object-fit: contain;
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
 `;
 
 export const CardBody = styled.div`

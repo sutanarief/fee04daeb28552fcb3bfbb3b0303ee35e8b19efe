@@ -68,8 +68,6 @@ export const TextInput = styled.input`
 `;
 
 export const SuggestionLocationWrapper = styled.div`
-  /* display: flex;
-  flex-direction: column; */
   margin: 0 80px 24px 16px;
   width: 100%;
 `;

@@ -5,14 +5,13 @@ export const LocationBarWrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: #fff;
-  align-self: stretch;
 `;
 
 export const LocationBarContent = styled.div`
   flex-direction: column;
   width: 100%;
   height: 60px;
-  margin: 16px 0 0 16px;
+  margin: 16px 0 0 0;
 `;
 
 export const LocationSubText = styled.span`
@@ -27,7 +26,6 @@ export const LocationButton = styled.button`
   font-size: 20px;
   font-weight: 600;
   align-items: center;
-  max-width: 200px;
   border: none;
   outline: none;
   cursor: pointer;
