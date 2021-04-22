@@ -2,7 +2,6 @@ import React from "react";
 import {
   DateBarWrapper,
   DateItem,
-  DateItemDisabled,
   DateText,
   DayText,
   SelectedDate,
@@ -30,14 +29,14 @@ const DateBar = () => {
         <DayText>JUM</DayText>
         <DateText>14</DateText>
       </DateItem>
-      <DateItemDisabled>
+      <DateItem>
         <DayText>SAB</DayText>
         <DateText>15</DateText>
-      </DateItemDisabled>
-      <DateItemDisabled>
+      </DateItem>
+      <DateItem>
         <DayText>MIN</DayText>
         <DateText>16</DateText>
-      </DateItemDisabled>
+      </DateItem>
     </DateBarWrapper>
   );
 };

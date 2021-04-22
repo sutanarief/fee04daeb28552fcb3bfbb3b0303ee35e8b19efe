@@ -13,13 +13,18 @@ export const DateBarWrapper = styled.div`
 export const DateItem = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin: 8px;
   align-content: center;
   justify-content: center;
   background-color: #fff;
   color: #424749;
+
+  @media screen and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const SelectedDate = styled.div`
@@ -33,6 +38,9 @@ export const SelectedDate = styled.div`
   background-color: #424749;
   color: #f1f1f2;
   border-radius: 50%;
+  @media screen and (max-width: 768px) {
+    width: 60px;
+  }
 `;
 
 export const DayText = styled.span`

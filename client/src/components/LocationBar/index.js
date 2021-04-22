@@ -6,6 +6,7 @@ import {
   LocationButton,
   LocationBarWrapper,
   LocationSubText,
+  LocationText,
   LocationBarContent,
 } from "./LocationBarElements";
 
@@ -40,9 +41,9 @@ const LocationBar = () => {
         <LocationBarContent>
           <LocationSubText>ALAMAT PENGANTARAN</LocationSubText>
           <LocationButton onClick={openModal}>
-            <span style={{ color: "#424749", backgroundColor: "#fff" }}>
+            <LocationText style={{ color: "#424749", backgroundColor: "#fff" }}>
               {location || "Select Location"}
-            </span>
+            </LocationText>
             <span
               className="material-icons"
               style={{ color: "#f9423a", backgroundColor: "#fff" }}

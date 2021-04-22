@@ -144,7 +144,6 @@ const Food = () => {
 
   const handleClick = (e, food) => {
     e.preventDefault();
-    console.log(food.name);
     dispatch(addToCart(food));
   };
 

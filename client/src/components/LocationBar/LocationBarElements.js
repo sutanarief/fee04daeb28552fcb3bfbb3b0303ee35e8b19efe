@@ -14,6 +14,15 @@ export const LocationBarContent = styled.div`
   margin: 16px 0 0 0;
 `;
 
+export const LocationText = styled.span`
+  color: #424749;
+  background-color: #fff;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
 export const LocationSubText = styled.span`
   font-size: 12px;
   font-weight: 500;

@@ -57,7 +57,6 @@ const LocationModal = ({ showModal, setShowModal }) => {
 
   const handleClick = (e, index) => {
     e.preventDefault();
-    console.log(suggestion[index][0]);
     dispatch(changeLocation(suggestion[index][0]));
     setShowModal((prev) => !prev);
     setSuggestion([]);

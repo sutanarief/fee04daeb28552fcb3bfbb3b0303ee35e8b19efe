@@ -5,7 +5,6 @@ export function changeLocation(payload) {
 }
 
 export function addToCart(payload) {
-  console.log(payload, "dari store");
   return { type: "CART/CHANGECART", payload };
 }
 
